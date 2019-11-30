@@ -17,4 +17,4 @@ jobs:
     - name: Run Office 365 CLI script
       uses: ./
       env:
-        O365_CLI_SCRIPT: o365 spo propertybag set --webUrl https://anoopccdev1.sharepoint.com/sites/testgroup1 --key key1 --value value1
+        O365_CLI_SCRIPT: o365 spo propertybag set --webUrl https://anoopccdev1.sharepoint.com/sites/Teamsite --key key1 --value value1
