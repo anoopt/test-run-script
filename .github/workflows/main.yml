@@ -1,6 +1,6 @@
 name: Run Office 365 CLI script
 
-on: [push]
+on: [pull_request]
 
 jobs:
   deploy:
@@ -17,4 +17,5 @@ jobs:
     - name: Run Office 365 CLI script
       uses: ./
       env:
-        O365_CLI_SCRIPT: o365 spo mail send --webUrl https://anoopccdev1.sharepoint.com/sites/testgroup1 --to 'anoop@anoopccdev1.onmicrosoft.com' --subject 'Email sent via Office 365 CLI GitHub Action' --body '<h1>Office 365 CLI</h1>Email sent via <b>GitHub Action</b>.'
+        # O365_CLI_SCRIPT: o365 spo mail send --webUrl https://anoopccdev1.sharepoint.com/sites/testgroup1 --to 'anoop@anoopccdev1.onmicrosoft.com' --subject 'Email sent via Office 365 CLI GitHub Action' --body '<h1>Office 365 CLI</h1>Email sent via <b>GitHub Action</b>.'
+        O365_CLI_SCRIPT_PATH: /script/lists.sh
