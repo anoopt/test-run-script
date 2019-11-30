@@ -1,6 +1,6 @@
 name: Run Office 365 CLI script
 
-on: [pull_request]
+on: [push]
 
 jobs:
   deploy:
