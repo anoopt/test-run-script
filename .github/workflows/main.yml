@@ -5,7 +5,7 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy App
+    name: Run CLI Script
     steps:
     - name: Checkout
       uses: actions/checkout@v1
@@ -17,4 +17,4 @@ jobs:
     - name: Run Office 365 CLI script
       uses: ./
       env:
-        O365_CLI_SCRIPT: o365 status
+        O365_CLI_SCRIPT: o365 spo propertybag set --webUrl https://anoopccdev1.sharepoint.com/sites/testgroup1 --key key1 --value value1
