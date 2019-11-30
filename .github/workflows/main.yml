@@ -1,0 +1,20 @@
+name: Run Office 365 CLI script
+
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy App
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Office 365 CLI Login
+      uses: anoopt/test-login@v1
+      env:
+        ADMIN_USERNAME:  ${{ secrets.adminUsername }}
+        ADMIN_PASSWORD:  ${{ secrets.adminPassword }}
+    - name: Run Office 365 CLI script
+      uses: ./
+      env:
+        O365_CLI_SCRIPT: o365 status
