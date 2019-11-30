@@ -1,15 +1,10 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Office 365 CLI'
+description: 'Runs an Office 365 CLI script'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  O365_CLI_SCRIPT_PATH:  
+    description: 'Relative path of the script in your repo.'
+  O365_CLI_SCRIPT:
+    description: 'Office 365 CLI Script'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
