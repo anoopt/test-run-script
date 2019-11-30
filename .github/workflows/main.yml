@@ -10,7 +10,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Office 365 CLI Login
-      uses: anoopt/sample-actions/login@v2
+      uses: anoopt/sample-actions/login@master
       env:
         ADMIN_USERNAME:  ${{ secrets.adminUsername }}
         ADMIN_PASSWORD:  ${{ secrets.adminPassword }}
